@@ -11,16 +11,18 @@
  	   border:none;}
  html,body{
  	height: 100%;
+    position: relative;
  }
 
 
-@media screen and (max-width:639px) {
-
+@media screen and (max-width:640px) {
     .w{
-        width: 100% !important;;
+        width: 100% !important;
     }
 }@media screen and (min-width:640px) {
-
+    .w{
+        width: 786px !important;
+    }
 }
  body{
  	width: 100%;
@@ -31,6 +33,6 @@
     font-family: Helvetica Neue,Helvetica,STHeiTi,Arial,sans-serif;
  }
  .w{
-    width: 708px;
+    width: 786px;
     margin: 0 auto;
  }

@@ -36,6 +36,26 @@ module.exports = {
             target:'https://poi.iqing.in',
             changeOrigin:true,
             pathRewrite:{'^/recommend':'/recommend'}
+        },
+        '/book':{
+            target:'https://poi.iqing.in',
+            changeOrigin:true,
+             pathRewrite:{'^/book':'/book'}
+        },
+        '/brand':{
+            target:'https://poi.iqing.in',
+            changeOrigin:true,
+             pathRewrite:{'^/brand':'/brand'}
+        },
+        '/subscriber':{
+            target:'https://poi.iqing.in',
+            changeOrigin:true,
+             pathRewrite:{'^/subscriber':'/subscriber'}
+        },
+        '/login':{
+            target:'http://localhost:3000',
+            changeOrigin:true,
+             pathRewrite:{'^/login':'/login'}
         }
         
     },

@@ -7,7 +7,21 @@
 		 </mt-swipe-item>
 		</mt-swipe>
 		<edRc></edRc>
+		<div class='split'></div>
+		<tpRC></tpRC>
+		<div class='split'></div>
+		<pyr></pyr>
+		<div class='split'></div>
+		<hot></hot>
+		<div class='split'></div>
+		<youhui></youhui>
+		<div class='split'></div>
+		<fenqu></fenqu>
+		<div class='split'></div>
+		<lately></lately>
+		<login></login>
 	</div>
+
 </template>
 
 <script>
@@ -20,6 +34,7 @@
 			}
 		},
 		mounted:function() {
+
 				var that = this;
 				axios.get('/recommend/?type=2&limit=10&offset=0&channel=1')
 				.then(function(response){
@@ -35,11 +50,16 @@
 
 
 <style>
+a{
+	color: #000;
+	text-decoration:none;
+}
 .home{
 	margin-top:0.925867rem;
 	position: relative;
 	top: -3px;
 }
+
 .he-nav{
 	background: #fff;
 	font-size: 16px;
@@ -56,4 +76,10 @@
 	height: 100%;
 	width: 100%;
 }
+.split{
+	height: .08rem;
+    background-color: #e4e4e4;
+}
+
+
 </style>

@@ -2,7 +2,7 @@
     <header class="top">
         <a class="logo" href="/"></a> 
         <span class="grow-1"></span>
-        <figure class="header-avatar">
+        <figure class="header-avatar" @click='login'>
             <img src="static/h2t.png"alt=""></figure>
             <a class="open-app" data-open-app="">打开客户端</a>
     </header>
@@ -10,18 +10,33 @@
 <script type="text/javascript">
 export default{
 	name:'headerC',
+    data:function(){
+        return {
+            
+        }
+    },
+    methods:{
+       login:function(argument) {
+            document.querySelector('.login').style.display='block';
+            document.querySelector('.login').style.opacity='1';
+            var qdiv=document.createElement('div');
+            qdiv.className = 'bdos';
+            var heig=document.body.scrollHeight;
+            var bbo=document.querySelector('.top');
+            bbo.appendChild(qdiv);
+            qdiv.style.height = heig+'px';
+       }     
+    }
 }
 
 </script>
 <style type="text/css">
-        .top {
+  .top {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
-    display: -webkit-box;
-    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -31,18 +46,7 @@ export default{
     border-bottom: 1px solid #d2d2d2;
     background: #fff;
     }
-    .top::before{
-        content:'';
-        position: absolute;
-        height: 1px;
-        font-size: 12px;
-        width: 708px;
-        background: #fff;
-        top: 0.9235867rem;
-        left: 20px;
-        z-index: 999;
-        left: 348px;
-    }
+   
     .logo{
     width: 1.05667rem;
     height: .45667rem;
@@ -70,5 +74,14 @@ export default{
     color: #fff;
     background: #fa8e9b;
     border-radius: .06667rem;
+}
+.bdos{
+    width: 100%;
+    background: #000;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 998;
 }
 </style>
